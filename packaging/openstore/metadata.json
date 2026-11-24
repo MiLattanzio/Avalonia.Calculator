@@ -1,0 +1,31 @@
+{
+  "id": "avalonia.calculator.milattanzio",
+  "title": "Avalonia Calculator",
+  "license": "MIT/X/Expat License",
+  "tagline": "Scientific calculator, programmer tools and unit conversions for Ubuntu Touch.",
+  "description": "A full-featured calculator for Ubuntu Touch, ported from Uno Calculator to Avalonia while preserving its mobile interface and original calculation engine.\n\n• Standard and scientific calculations, including trigonometry, logarithms, powers and factorials.\n• Programmer mode with HEX, DEC, OCT and BIN, word sizes from 8 to 64 bits, logical operations and a bit editor.\n• Multiple memories and calculation history for the current session.\n• 154 units across 12 conversion categories, including length, area, volume, temperature, energy and speed.\n• Currency conversion with exchange rates fetched on demand from the European Central Bank, or a rate entered manually.\n• Date differences and adding or subtracting years, months and days.\n• Automatic light and dark themes following the phone settings.\n• Device-language localization using 65 Uno language resource sets, with English fallback where a translation is missing.\n• Touch-friendly controls, the native Ubuntu Touch keyboard and copy/paste integration.\n\nBuilt for ARM64 devices running Ubuntu Touch 24.04-2.x and tested on Fairphone 5. Calculations and unit conversions work offline; downloading currency rates requires an Internet connection. History and memories last for the current app session. Date calculations use the Gregorian calendar.\n\nOpen source under the MIT license. Based on Uno/Microsoft Calculator, with Avalonia UI and UTDotNet-Bridge integration. This is an independent port.",
+  "category": "Utilities",
+  "keywords": [
+    "calculator",
+    "scientific",
+    "programmer",
+    "converter",
+    "currency",
+    "units",
+    "math",
+    "dates",
+    "avalonia",
+    "ubuntu touch"
+  ],
+  "source_url": "https://github.com/MiLattanzio/Avalonia.Calculator",
+  "support_url": "https://github.com/MiLattanzio/Avalonia.Calculator/issues",
+  "version": "0.1.5",
+  "changelog": "First OpenStore release. Includes standard, scientific and programmer calculators, unit and currency conversion, date calculations, device-language localization and automatic system light/dark themes. Fixes keyboard layout restoration after closing the manual exchange-rate dialog. Verified with 79 automated checks and on Fairphone 5.",
+  "screenshots": [
+    "01-standard-dark.png",
+    "02-standard-light.png",
+    "03-scientific.png",
+    "04-programmer.png",
+    "05-currency.png"
+  ]
+}

@@ -2,6 +2,10 @@
 
 Porting Linux desktop e Ubuntu Touch di Uno.Calculator, con interfaccia Avalonia derivata dagli XAML mobile originali e il motore originale C++ Microsoft/Uno (CalcManager, CalcEngine e RatPack). Il progetto è autonomo: non richiede un checkout Uno o UTDotNet per compilare.
 
+Disponibile su [OpenStore](https://open-store.io/app/avalonia.calculator.milattanzio/)
+per Ubuntu Touch 24.04-2.x ARM64. La prima versione pubblicata è la **0.1.5**;
+dettagli e materiali della scheda in [docs/openstore.md](docs/openstore.md).
+
 ## Funzioni
 
 - Standard con valutazione immediata; scientifica con precedenza, parentesi, trigonometria, funzioni inverse/iperboliche, potenze e fattoriale.
