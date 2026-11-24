@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>Avalonia.Calculator</AssemblyName>
+    <RootNamespace>AvaloniaCalculator</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <RuntimeIdentifiers>linux-x64;linux-arm64</RuntimeIdentifiers>
+    <PublishTrimmed>false</PublishTrimmed>
+    <PublishSingleFile>false</PublishSingleFile>
+    <PublishAot>false</PublishAot>
+    <NativeRid Condition="'$(RuntimeIdentifier)' != ''">$(RuntimeIdentifier)</NativeRid>
+    <NativeRid Condition="'$(NativeRid)' == ''">linux-x64</NativeRid>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="Calculator.Tests" />
+    <AvaloniaResource Include="Assets/**" />
+    <EmbeddedResource Include="Localization/Resources/*.json" WithCulture="false" />
+    <PackageReference Include="Avalonia.Desktop" Version="12.1.6" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="12.1.6" />
+    <PackageReference Include="UTDotNet.Avalonia" Version="0.1.6-preview.1" />
+    <None Include="../../artifacts/native/$(NativeRid)/libCalculatorEngine.so" Link="libCalculatorEngine.so" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+  <Target Name="BuildNativeEngine" BeforeTargets="PrepareForBuild" Condition="'$(SkipNativeBuild)' != 'true'">
+    <Exec Command="bash &quot;$(MSBuildProjectDirectory)/../../scripts/build-native.sh&quot; $(NativeRid)" />
+  </Target>
+</Project>

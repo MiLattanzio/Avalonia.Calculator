@@ -1,0 +1,45 @@
+<Window xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="AvaloniaCalculator.Views.MainWindow"
+        Title="Avalonia Calculator" Width="360" Height="600" MinWidth="320" MinHeight="300"
+        Background="{DynamicResource CalcBackgroundBrush}" Foreground="{DynamicResource CalcForegroundBrush}" FontSize="15"
+        FontFamily="avares://Avalonia.Calculator/Assets#Selawik">
+  <Window.Styles><StyleInclude Source="/Views/UnoStyles.axaml" /></Window.Styles>
+  <Border x:Name="ShellRoot">
+    <Grid x:Name="Shell" Margin="0,3,0,0">
+      <!-- MainPage.xaml: mobile NavigationView header, 40 DIP; dock at 560 DIP. -->
+      <Grid x:Name="MainLayout" ColumnDefinitions="*,0">
+        <Grid RowDefinitions="40,*">
+          <Grid ColumnDefinitions="48,*,40">
+            <Button x:Name="OpenNavigation" Classes="calc caption">
+              <Path Data="M0,0 L16,0 M0,5 L16,5 M0,10 L16,10" Stroke="{DynamicResource CalcForegroundBrush}" StrokeThickness="1" Width="16" Height="10" />
+            </Button>
+            <TextBlock x:Name="ModeTitle" Grid.Column="1" Text="" TextTrimming="CharacterEllipsis" FontSize="20" Margin="4,0,0,0" VerticalAlignment="Center" />
+            <Button x:Name="ShowHistory" Grid.Column="2" Classes="calc caption">
+              <TextBlock Text="&#xE81C;" FontSize="16" FontFamily="avares://Avalonia.Calculator/Assets/CalcMDL2.ttf#Calculator MDL2 Assets" />
+            </Button>
+          </Grid>
+          <Grid x:Name="PageHost" Grid.Row="1" />
+        </Grid>
+        <Border x:Name="DockHost" Grid.Column="1" />
+      </Grid>
+      <Grid x:Name="HistoryOverlay" IsVisible="False">
+        <Border x:Name="DismissHistory" Background="{DynamicResource CalcScrimBrush}" />
+        <Border x:Name="HistoryFlyoutHost" VerticalAlignment="Bottom" Background="{DynamicResource CalcBackgroundBrush}" />
+      </Grid>
+      <Grid x:Name="NavigationOverlay" IsVisible="False">
+        <Border x:Name="DismissNavigation" Background="{DynamicResource CalcScrimBrush}" />
+        <Border Width="256" HorizontalAlignment="Left" Background="{DynamicResource CalcSurfaceBrush}">
+          <Grid RowDefinitions="40,*">
+            <Button x:Name="CloseNavigation" Classes="calc caption" Width="48" HorizontalAlignment="Left">
+              <Path Data="M0,0 L16,0 M0,5 L16,5 M0,10 L16,10" Stroke="{DynamicResource CalcForegroundBrush}" StrokeThickness="1" Width="16" Height="10" />
+            </Button>
+            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled"><StackPanel x:Name="Navigation" /></ScrollViewer>
+          </Grid>
+        </Border>
+      </Grid>
+      <Border x:Name="StatusToast" IsVisible="False" Background="{DynamicResource CalcSurfaceBrush}" Padding="16,10" Margin="8" VerticalAlignment="Bottom">
+        <TextBlock x:Name="StatusText" TextWrapping="Wrap" FontSize="13" />
+      </Border>
+    </Grid>
+  </Border>
+</Window>

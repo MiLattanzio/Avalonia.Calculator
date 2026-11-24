@@ -1,0 +1,33 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <!-- Uno mobile surfaces: opaque page, flat translucent numeric/operator keys. -->
+  <ResourceDictionary.ThemeDictionaries>
+    <ResourceDictionary x:Key="Light">
+      <SolidColorBrush x:Key="CalcBackgroundBrush" Color="#E6E6E6" />
+      <SolidColorBrush x:Key="CalcSurfaceBrush" Color="#F2F2F2" />
+      <SolidColorBrush x:Key="CalcForegroundBrush" Color="Black" />
+      <SolidColorBrush x:Key="CalcSecondaryBrush" Color="#99000000" />
+      <SolidColorBrush x:Key="CalcDisabledBrush" Color="#66000000" />
+      <SolidColorBrush x:Key="CalcOperatorBrush" Color="#66FFFFFF" />
+      <SolidColorBrush x:Key="CalcNumberBrush" Color="#CCFFFFFF" />
+      <SolidColorBrush x:Key="CalcHoverBrush" Color="#CFCFCF" />
+      <SolidColorBrush x:Key="CalcPressedBrush" Color="#B8B8B8" />
+      <SolidColorBrush x:Key="CalcSelectionBrush" Color="#DADADA" />
+      <SolidColorBrush x:Key="CalcAccentBrush" Color="#0078D7" />
+      <SolidColorBrush x:Key="CalcScrimBrush" Color="#33000000" />
+    </ResourceDictionary>
+    <ResourceDictionary x:Key="Dark">
+      <SolidColorBrush x:Key="CalcBackgroundBrush" Color="#1F1F1F" />
+      <SolidColorBrush x:Key="CalcSurfaceBrush" Color="#2B2B2B" />
+      <SolidColorBrush x:Key="CalcForegroundBrush" Color="White" />
+      <SolidColorBrush x:Key="CalcSecondaryBrush" Color="#99FFFFFF" />
+      <SolidColorBrush x:Key="CalcDisabledBrush" Color="#66FFFFFF" />
+      <SolidColorBrush x:Key="CalcOperatorBrush" Color="#66000000" />
+      <SolidColorBrush x:Key="CalcNumberBrush" Color="#CC000000" />
+      <SolidColorBrush x:Key="CalcHoverBrush" Color="#18FFFFFF" />
+      <SolidColorBrush x:Key="CalcPressedBrush" Color="#30FFFFFF" />
+      <SolidColorBrush x:Key="CalcSelectionBrush" Color="#3F3F3F" />
+      <SolidColorBrush x:Key="CalcAccentBrush" Color="#60CDFF" />
+      <SolidColorBrush x:Key="CalcScrimBrush" Color="#66000000" />
+    </ResourceDictionary>
+  </ResourceDictionary.ThemeDictionaries>
+</ResourceDictionary>

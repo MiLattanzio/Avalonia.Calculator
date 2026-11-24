@@ -1,0 +1,15 @@
+{
+  "name": "avalonia.calculator.milattanzio",
+  "title": "Avalonia Calculator",
+  "version": "0.1.5",
+  "description": "Uno Calculator ported to Avalonia with native Ubuntu Touch input.",
+  "maintainer": "Mi Lattanzio <mi@polecola.it>",
+  "architecture": "arm64",
+  "framework": "ubuntu-touch-24.04-2.x",
+  "hooks": {
+    "calculator": {
+      "apparmor": "calculator.apparmor",
+      "desktop": "calculator.desktop"
+    }
+  }
+}
